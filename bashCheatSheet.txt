@@ -1,0 +1,15 @@
+$ grep -rl foo . | grep -v '\.svn' | xargs perl -pi -e 's/foo/bar/g'
+Search for any file containing foo under the current directory and recursively.  Exclude .svn directories.  Replace foo with bar globably.
+
+$ svn co http://svn.repository/location foo
+Checkout repository and put it locally in foo
+
+$ svn commit -m "Some text describing the changes"
+Commit the changes by uploading the changed files to the repo and include a message
+
+$ svn up
+Do an svn up on the server to impliment the changes to the repo
+
+$ rsync -avhP foo/ bar
+Copy all the contents of direcotory foo to new directory bar is it doesnt exist.  (a = archive, v = verbos, h = human readable, P = progress)
+
